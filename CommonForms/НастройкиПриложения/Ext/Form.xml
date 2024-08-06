@@ -17,6 +17,91 @@
 			<ContextMenu name="АвтоматическиПеремещатьИстекшиеТалоныВКорзинуКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="АвтоматическиПеремещатьИстекшиеТалоныВКорзинуРасширеннаяПодсказка" id="3"/>
 		</CheckBoxField>
+		<UsualGroup name="ГруппаРезервноеКопирование" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резервное копирование</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаРезервноеКопированиеРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЯндексДиск" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Яндекс.Диск</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаЯндексДискРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<InputField name="ЛогинЯндексДиск" id="14">
+							<DataPath>НаборКонстант.ЛогинЯндексДиск</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Логин</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЛогинЯндексДискКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ЛогинЯндексДискРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<InputField name="ПарольЯндексДиск" id="17">
+							<DataPath>НаборКонстант.ПарольЯндексДиск</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пароль</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПарольЯндексДискКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ПарольЯндексДискРасширеннаяПодсказка" id="19">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Для работы сторонних приложений с Яндекс.Диском необходимо создать и указать в поле выше &lt;link https://yandex.ru/support/id/authorization/app-passwords.html&gt;пароль приложения&lt;/&gt;.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</InputField>
+						<InputField name="КаталогЯндексДиск" id="20">
+							<DataPath>НаборКонстант.КаталогЯндексДиск</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Каталог</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КаталогЯндексДискКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="КаталогЯндексДискРасширеннаяПодсказка" id="22"/>
+						</InputField>
+						<Button name="ПроверитьПодключениеКЯндексДиску" id="29">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПроверитьПодключениеКЯндексДиску</CommandName>
+							<ExtendedTooltip name="ПроверитьПодключениеКЯндексДискуРасширеннаяПодсказка" id="30"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="СоздатьРезервнуюКопию" id="23">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СоздатьРезервнуюКопию</CommandName>
+					<ExtendedTooltip name="СоздатьРезервнуюКопиюРасширеннаяПодсказка" id="24"/>
+				</Button>
+				<Button name="ПоказатьСписокРезервныхКопий" id="27">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПоказатьСписокРезервныхКопий</CommandName>
+					<ExtendedTooltip name="ПоказатьСписокРезервныхКопийРасширеннаяПодсказка" id="28"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="НаборКонстант" id="1">
@@ -27,4 +112,51 @@
 			<SavedData>true</SavedData>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="СоздатьРезервнуюКопию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать резервную копию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать резервную копию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьРезервнуюКопию</Action>
+		</Command>
+		<Command name="ПоказатьСписокРезервныхКопий" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список резервных копий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать список резервных копий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьСписокРезервныхКопий</Action>
+		</Command>
+		<Command name="ПроверитьПодключениеКЯндексДиску" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение к Яндекс.Диску</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьПодключениеКЯндексДиску</Action>
+		</Command>
+	</Commands>
 </Form>
