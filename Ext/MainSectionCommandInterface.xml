@@ -11,7 +11,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="Constant.ДатаПоследнегоРезервногоКопирования.StandardCommand.Open">
+		<Command name="100:dadb459f-b5e0-48fe-984f-c1fbee04527c">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>

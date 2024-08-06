@@ -254,11 +254,16 @@
 			<StyleItem>ШрифтТалонСИстекшимСроком</StyleItem>
 			<Role>ПолныеПрава</Role>
 			<CommonModule>ЗапускПриложения</CommonModule>
+			<CommonModule>ОбщегоНазначения</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиент</CommonModule>
+			<CommonModule>РезервноеКопирование</CommonModule>
+			<CommonModule>РезервноеКопированиеФормат1</CommonModule>
 			<Constant>АвтоматическиПеремещатьИстекшиеТалоныВКорзину</Constant>
 			<Constant>ВерсияДанныхПриложения</Constant>
 			<Constant>СрокХраненияТалоновВКорзине</Constant>
-			<Constant>ДатаПоследнегоРезервногоКопирования</Constant>
+			<Constant>ЛогинЯндексДиск</Constant>
+			<Constant>ПарольЯндексДиск</Constant>
+			<Constant>КаталогЯндексДиск</Constant>
 			<CommonForm>НастройкиПриложения</CommonForm>
 			<Catalog>ГарантийныеТалоны</Catalog>
 		</ChildObjects>
